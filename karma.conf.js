@@ -9,6 +9,11 @@ module.exports = function(config) {
             'test/**/*.js': ['jshint'],
             'src/**/*.js': ['jshint']
         },
-        browsers: ['PhantomJS']
+        browsers: ['ChromeHeadless'],
+        plugins: [
+            'karma-jasmine',
+            'karma-chrome-launcher',
+            'karma-jshint-preprocessor'
+        ]
     })
 }
